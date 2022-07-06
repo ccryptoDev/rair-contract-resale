@@ -15,7 +15,7 @@ nginx-auth/*
 package-lock.json
 
 # unnecessary files
-deploy/
+# deploy/
 deployments/
 Factory.js
 MarketplaceResale.sol
