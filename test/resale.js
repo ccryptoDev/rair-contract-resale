@@ -64,7 +64,7 @@ describe('Token Factory with resale', function () {
       expect(await erc777instance.totalSupply()).to.equal(initialSupply);
       hre.tracer.nameTags[erc777instance.address] = 'First 777 Address';
       hre.tracer.nameTags[erc777ExtraInstance.address] = 'Second 777 Address';
-
+        
       /*
        *	Events:
        *	erc777instance.on('Sent', (from, to, value) => {
@@ -283,6 +283,7 @@ describe('Token Factory with resale', function () {
     });
 
     describe('Owner', function () {
+      console.log("onwer address---: ", owner.address);
       it('Only the owner can add ERC777 tokens', async function () {
         let factoryAsAddress1 = factoryInstance.connect(addr1);
         await expect(
